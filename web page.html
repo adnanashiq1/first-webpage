@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Lifestyle</title>
+    <style>
+/* Base Styles */
+body {
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 3rem;
+    align-content: flex-end;
+}
+
+nav {
+    background-color: #444;
+    padding: 0.5rem;
+    text-align: center;
+    color: #faf9f9;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: rgba(255, 246, 246, 0.863);
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #f7f7f7;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    background-color: #444;
+    overflow: hidden;
+}
+
+footer a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    color: #faf9f9;
+}
+
+/* Flexbox Layout for Images */
+.images {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure all items stay in one line */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    gap: 20px;
+    padding: 10px;
+}
+
+.images div {
+    box-sizing: border-box;
+    background-color: #55525244;
+    border-radius: 30px;
+    width: 23%; /* Adjust width to fit 4 items in one line */
+    height: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Style for Add to Cart Button */
+input[type="button"].add-to-cart {
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 100%;
+    height: 60px; /* Increased height */
+    font-size: 1.2rem; /* Increased font size */
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none; /* Remove default border */
+}
+
+input[type="button"].add-to-cart:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust height */
+    overflow: hidden;
+    margin: 2vh 0;
+}
+
+.carousel-cell {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-cell img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        font-size: large;
+    }
+
+    header {
+        font-size: 2rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .images {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+
+    .images div {
+        width: calc(50% - 20px); /* Two items per line on tablets */
+    }
+
+    .carousel-cell img {
+        height: auto;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    input[type="button"].add-to-cart {
+        font-size: 1rem; /* Adjust font size for tablets */
+        height: 50px; /* Adjust height for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: medium;
+    }
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        padding: 1rem;
+    }
+
+    .images div {
+        width: calc(100% - 20px); /* One item per line on phones */
+    }
+
+    .carousel-cell img {
+        height: auto;
+    }
+
+    input[type="button"].add-to-cart {
+        font-size: 0.9rem; /* Adjust font size for phones */
+        height: 40px; /* Adjust height for phones */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+        <img src="/images/Screenshot 2024-07-19 205651.jpg" alt="" class="logo">
+        Zero Lifestyle
+    </div>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Earbuds</a>
+        <a href="#">Smart Watches</a>
+        <a href="#">Support</a>
+        <a href="#" id="login">login/signup</a>
+</nav>
+    <div class="carousel">
+        <div class="carousel-cell"><img src="/images/slide1.png" alt="Slide 1"></div>
+        <div class="carousel-cell"><img src="/images/slide2.png" alt="Slide 2"></div>
+        <div class="carousel-cell"><img src="images/slide3.png" alt="Slide 3"></div>
+        <div class="carousel-cell"><img src="/images/slide5.png" alt="Slide 4"></div>
+        <div class="carousel-cell"><img src="/images/slide6.png" alt="Slide 5"></div>
+        <div class="carousel-cell"><img src="/images/slide7.png" alt="Slide 6"></div>
+    </div>
+    <main>
+        <section>
+            <center><h1>Our Brand Ambassador</h1></center>
+            <video src="/videos/day-zero-event-highlights-zero-lifestyle-fashion-tech-brand-pakistan-1080-ytshorts.savetube.me.mp4" controls width="32%" height="235" poster="images/irfan.jpeg" autoplay muted loop></video>
+            <video src="/videos/our-first-z-star-shaheen-afridi-1080-ytshorts.savetube.me.mp4" controls width="32%" autoplay muted loop></video>
+            <video src="/videos/your-beat-matters-feat-fawad-khan-z-buds-fashion-tech-revolution-zero-lifestyle-1080-ytshorts.savetube.me.mp4" width="32%" controls poster="/images/fawad.jpeg" autoplay loop muted> </video>
+        </section>
+        <section class="picture">
+            <center><h1>Our Famous Earbuds</h1></center>
+            <div class="images">
+                <div class="image1">
+                    <img src="images/ear1.png" alt="this is an Earbuds image" id="image1">
+                    <h1>Rover Earbuds</h1>
+                    <p>Flybird Design | Quad Mic & ENC</p>
+                    <p>Color: JET BLACK</p>
+                    <p>Rs: 4,499</p>
+                    <p>RS14,999 | 70% OFF</p>
+                    <input type="button" value="Add to Cart" class="add-to-cart">
+                </div>
+                <div class="image3">
+                    <img src="images/ear3.png" alt="this is an Earbuds image" id="image3">
+                    <h1>Quantum Earbuds</h1>
+                    <p>ANC | ENC Quad Mic</p>
+                    <p>Color: AURORA GREEN</p>
+                    <p>Rs.6,999</p>
+                    <p>Rs19,999 | 65% OFF</p>
+                    <input type="button" value="Add to Cart" class="add-to-cart">
+                </div>
+                <div class="image4">
+                    <img src="images/ear4.png" alt="this is an Earbuds image" id="image4">
+                    <h1>Aura Earbuds</h1>
+                    <p>ENC & 4 Mic | Sleekest Earbuds</p>
+                    <p>Color: AURA BUDS WHITE</p>
+                    <P>Rs: 5,999</P>
+                    <p>Rs:10,999 | 45% OFF</p>
+                    <input type="button" value="Add to Cart" class="add-to-cart">
+                </div>
+                <div class="image5">
+                    <img src="images/earbuds 5.png" alt="this is an Earbuds image" id="image5">
+                    <h1>Gravity Earbuds</h1>
+                    <p>ENC | Super Loud Sound</p>
+                    <p>Color: AURA BLUE</p>
+                    <p>Rs: 4,999</p>
+                    <p>Rs:14,499 | 65% OFF</p>
+                    <input type="button" value="Add to Cart" class="add-to-cart">
+                </div>
+            </div>
+        </section>
+        <section>
+            <center><h1 id="space-above">Our Famous Watches</h1></center>
+            <div class="images">
+                <div class="img1">
+                    <img src="images/watch1.png" alt="this is a watch image" id="img1">
+                    <h1>Delta Smart Watch</h1>
+                    <p>Largest 2.40" Amoled Curved</p>
+                    <p>Display</p>
+                    <p>Color: Gray Gun Metal</p>
+                    <p>Rs.9,899</p>
+                    <P>Rs29,999 | 67% OFF</P>
+                    <input type="button" value="Add to Cart" class="add-to-cart">
+                </div>
+                <div class="img2">
+                    <img src="images/watch 2.png" alt="this is a watch image" id="img2">
+                    <h1>Infinity Smart Watch</h1>
+                    <p>BT Calling</p>
+                    <p>Industry's Largest Screen</p>
+                    <p>Color: Black</p>
+                    <p>Rs.8,999</p>
+                    <p>Rs.23,499 | 61% OFF</p>
+                    <input type="button" value="Add to Cart" class="add-to-cart">
+                </div>
+                <div class="img3">
+                    <img src="images/watch 3.png" alt="this is a watch image" id="img3">
+                    <h1>Pixel Smart Watch</h1>
+                    <p>Amoled Screen</p>
+                    <p>Designer Smart Watch</p>
+                    <p>Color: Black</p>
+                    <p>Rs.9,999</p>
+                    <p>Rs.24,999 | 60% OFF</p>
+                    <input type="button" value="Add to Cart" class="add-to-cart">
+                </div>
+                <div class="img4">
+                    <img src="images/watch 4.png" alt="this is a watch image" id="img4">
+                    <h1>Vision Smart Watch</h1>
+                    <p>AMOLED | 7 Day Battery</p>
+                    <p>Color: Black Gold</p>
+                    <p>Rs.8,999</p>
+                    <p>Rs.24,999 | 64% OFF</p>
+                    <input type="button" value="Add to Cart" class="add-to-cart">
+                </div>
+            </div>
+        </section>
+        <section>
+            <center><h1>Reviews</h1></center>
+            <iframe src="https://www.youtube.com/embed/inCb8kTHVV0?si=GBOOzLf9MLzBP82t" frameborder="0" width="33%" height="260"></iframe>
+            <iframe src="https://www.youtube.com/embed/jF3qhZMrAJc?si=Ktgi8s3GsKY4l1oE" frameborder="0" width="33%" height="260"></iframe>
+            <iframe src="https://www.youtube.com/embed/uxD9JPwrskk?si=0yij7TIVr9R6zi5I" frameborder="0" width="33%" height="260"></iframe>
+        </section>
+        <section>
+            <center><h1>Our Founder</h1></center>
+            <center><img src="/images/adnan.JPG" alt="this is an image of our founder" width="25%" height="270" class="image"></center>
+            <center><p><b>ADNAN ASHIQ</b></p></center>
+            <p><i>Hi! My name is Adnan Ashiq and I am a founder of zero lifestyle. Our company zero lifestyle was a tech company and they providing young generation with nice fashion and tech together. I am a software engineer and a CEO of zero lifestyle. I am starting this company when i was 18 years old and now here i am.</i></p>
+        </section>
+    </main>
+    <footer>
+        <a href="#">FAQ</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">&copy;2024 | Zero Lifestyle</a>
+    </footer>
+
+    <script>
+        const cells = document.querySelectorAll('.carousel-cell');
+        let index = 0;
+
+        function showSlide(i) {
+            cells.forEach((cell, j) => {
+                cell.style.transform = `translateX(${(j - i) * 100}%)`;
+            });
+        }
+
+        function nextSlide() {
+            index = (index + 1) % cells.length;
+            showSlide(index);
+        }
+
+        showSlide(index);
+        setInterval(nextSlide, 2000);
+    </script>
+</body>
+</html>
